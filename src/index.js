@@ -194,7 +194,7 @@ async function playerRaceEngine(character1, character2){
             } else if (opcao === "2") {
                 readline.question('Escolha o número do primeiro personagem (1 a 6): ', async (num1) => {
                     const player01 = escolherPersonagem(Number(num1));
-                    const player02 = escolherPersonagem(2);
+                    const player02 = escolherPersonagem(Math.floor(Math.random() * 6) + 1);
                     if(player01.NAME === player02.NAME) {
                         if (!player01.NAME.includes("(Player 1)")) {
                             player01.NAME = player01.NAME + " (Player 1)";
